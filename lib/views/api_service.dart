@@ -3,35 +3,35 @@ import 'package:advance_budget_request_system/views/data.dart';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  static String url = "http://127.0.0.1:8000/api/budget/";
+  static String url = "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/budget/";
 
-  static String projectEndPoint = "http://127.0.0.1:8000/api/project/";
+  static String projectEndPoint = "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/project/";
   final String projectBudgetEndPoint =
-      "http://127.0.0.1:8000/api/projectbudget/";
-  final String tripEndPoint = "http://127.0.0.1:8000/api/trip/";
-  final String tripBudgetEndPoint = "http://127.0.0.1:8000/api/tripbudget/";
+      "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/projectbudget/";
+  final String tripEndPoint = "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/trip/";
+  final String tripBudgetEndPoint = "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/tripbudget/";
   final String TripCodeAutoIncrementEndPoint =
-      "http://127.0.0.1:8000/api/trips/next-code/";
-  final String operationEndPoint = "http://127.0.0.1:8000/api/operation/";
+      "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/trips/next-code/";
+  final String operationEndPoint = "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/operation/";
   final String operationBudgetEndPoint =
-      "http://127.0.0.1:8000/api/operationbudget/";
+      "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/operationbudget/";
   final String operationCodeAutoIncrementEndPoint =
-      "http://127.0.0.1:8000/api/operations/next-code/";
+      "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/operations/next-code/";
   final String advanceRequestEndPoint =
-      "http://127.0.0.1:8000/api/advancerequest/";
+      "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/advancerequest/";
   final String advanceCodeAutoIncrementEndPoint =
-      "http://127.0.0.1:8000/api/requests/next-code/";
-  final String cashPaymentEndPoint = "http://127.0.0.1:8000/api/cashpayment/";
-  final String cashPaymentAutoIncrementEndPoint= "http://127.0.0.1:8000/api/requests/next-code/";
-  final String settlementEndPoint = "http://127.0.0.1:8000/api/settlement/";
+      "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/requests/next-code/";
+  final String cashPaymentEndPoint = "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/cashpayment/";
+  final String cashPaymentAutoIncrementEndPoint= "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/requests/next-code/";
+  final String settlementEndPoint = "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/settlement/";
   final String settlementDetailEndPoint =
-      "http://127.0.0.1:8000/api/settlementdetail/";
-  final String userLoginEndPoint = "http://127.0.0.1:8000/api/user/";
-  final String departmentEndPoint = "http://127.0.0.1:8000/api/department/";
+      "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/settlementdetail/";
+  final String userLoginEndPoint = "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/user/";
+  final String departmentEndPoint = "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/department/";
   static String approvalsetupEndPoint =
-      "http://127.0.0.1:8000/api/requestsetup/";
+      "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/requestsetup/";
   static String approvalstepEndPoint =
-      "http://127.0.0.1:8000/api/approversetupstep/";
+      "https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/approversetupstep/";
 
   Future<List<Budget>> fetchBudgetCodeData() async {
     final response = await http.get(Uri.parse(url));
@@ -431,7 +431,7 @@ class ApiService {
 
   Future<void> registerUser(Map<String, dynamic> userData) async {
     final response = await http.post(
-      Uri.parse('http://ievent.southeastasia.cloudapp.azure.com:8000/api/user/'),
+      Uri.parse('https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/user/'),
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode({
         'UserName': userData['username'],
@@ -454,7 +454,7 @@ class ApiService {
   Future<Map<String, dynamic>?> loginUser(
       String email, String password, String departmentId) async {
     final response = await http.post(
-      Uri.parse('http://ievent.southeastasia.cloudapp.azure.com:8000/api/login/'),
+      Uri.parse('https://backendpyth-fxenfvbhadeddxfn.canadacentral-01.azurewebsites.net/api/login/'),
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode({
         'User_Email': email,
